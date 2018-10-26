@@ -1,28 +1,5 @@
 @import './partials/mixins';
 
-.down-arrow {
-    &::after {
-        content: '';
-        position: absolute;
-        width: 70px;
-        height: 70px;
-        display: flex;
-        justify-content: center;
-        transform: rotate(45deg);
-        z-index: -1;
-        left: 48.2%;
-        bottom: -10px;
-
-        @include breakpoint-only(lg) {
-            bottom: -5px;
-        }
-        @include breakpoint-only(sm) {
-            bottom: -3px;
-            left: 45%;
-        }
-    }
-}
-
 a.hotdog {
     background: #ffba00;
     border-radius: 1.25rem;
@@ -30,11 +7,55 @@ a.hotdog {
     text-align: center;
 }
 
-.narrow-content {
-    width: 90%;
-    margin: 0 auto;
+.inner-content {
+    background: #f1f4f8; 
+    padding: 2.75rem 2rem;
+
+    @include breakpoint-max(sm) {
+        padding: 2rem 1.25rem;
+    }
+    @include breakpoint-max(xs) {
+        padding: 2rem 0rem;
+        background: transparent;
+    }
 }
 
-.view-all-link {
+.section-title {
+    font-weight: 300;
+    color: #b3b6ba;
+    font-size: 1.35rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 2rem;
+    text-transform: capitalize;
+}
+
+.view-all-links {
+    position: relative;
+    width: 230px;
+    background: #16a9ff;
+    border-radius: 3rem;
+    padding: 0.65rem 2.3rem;
+    overflow: hidden;
     margin: 0 auto;
+
+    @include breakpoint-max(sm) {
+        width: 240px;
+    }
+
+    .text {
+        font-size: 1rem;
+    }
+
+    .right-arrow {
+        background: #1498e4;
+        position: absolute;
+        right: 0;
+        padding: 0 1.25rem;
+        height: 100%;
+
+        i {
+            font-size: 1.5rem;
+        }
+    }
 }
