@@ -239,11 +239,11 @@ header .header-tabs ul li a {
     }
 
     header .header-top {
-        height: 120px;
+        height: 85px;
     }
 
     header .header-top .header-logo {
-        width: 150px;
+        width: 120px;
     }
 
     header .header-top .header-button .make-booking {
